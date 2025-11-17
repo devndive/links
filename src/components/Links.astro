@@ -4,31 +4,78 @@ import Link from "./Link.astro";
 
 <div class="container">
     <header>
+        <div class="theme-toggle">
+            <button
+                class="theme-btn active"
+                id="lightBtn"
+                aria-label="Light mode">☀️</button
+            >
+            <button class="theme-btn" id="darkBtn" aria-label="Dark mode"
+                >🌙</button
+            >
+        </div>
         <h1>Mastering GitHub Copilt</h1>
         <p class="subtitle">Essential links and tools to boost your success</p>
     </header>
 
     <div class="links-container">
-        <Link
-            href="https://austen.info/blog/github-copilot-agent-mcp"
-            number={1}
-            title="Developing with GitHub Copilot Agent Mode and MCP"
-            description="Learn how to build a research, planning and implementation agent."
-        />
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">AI Assisted Engineering</h2>
+                <p class="section-description">
+                    Resource that help to manage context and optimize quality of
+                    the code generated.
+                </p>
+            </div>
+            <Link
+                href="https://github.com/github/awesome-copilot/tree/main"
+                number={1}
+                title="Awesome Copilot"
+                description="A community curated collection of custom agents, prompts and instructions to supercharge your GitHub Copilot experience."
+            />
 
-        <Link
-            href="https://github.com/github/awesome-copilot/tree/main"
-            number={2}
-            title="Awesome Copilot"
-            description="A community curated collection of custom agents, prompts and instructions to supercharge your GitHub Copilot experience."
-        />
+            <Link
+                href="https://arinco.com.au/blog/github-copilot-devops-excellence-prompt-files-vs-instructions-vs-chat-modes/"
+                number={2}
+                title="Prompt files vs. Instructions vs. Chat Modes (now agents)"
+                description="A great post explaining the difference and use cases for each feature. It also includes some examples and a decision matrix"
+            />
+            <Link
+                href="https://austen.info/blog/github-copilot-agent-mcp"
+                number={3}
+                title="Developing with GitHub Copilot Agent Mode and MCP"
+                description="Learn how to build a research, planning and implementation agent."
+            />
 
-        <Link
-            href="https://arinco.com.au/blog/github-copilot-devops-excellence-prompt-files-vs-instructions-vs-chat-modes/"
-            number={3}
-            title="Prompt files vs. Instructions vs. Chat Modes (now agents)"
-            description="A great post explaining the difference and use cases for each feature. It also includes some examples and a decision matrix"
-        />
+            <Link
+                href="https://modelcontextprotocol.io/docs/develop/build-server"
+                number={4}
+                title="Building your own MCP server"
+                description="Learn how you can build your own MCP server and how to use it."
+            />
+        </section>
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">VS Code</h2>
+                <p class="section-description">
+                    Resource specifically to work with VS Code
+                </p>
+            </div>
+
+            <Link
+                href="https://code.visualstudio.com/docs/copilot/customization/custom-instructions"
+                number={5}
+                title="Use custom instructions in VS Code"
+                description="A guideline on how to configure and use custom instructions to define guidelines and rules."
+            />
+
+            <Link
+                href="https://code.visualstudio.com/docs/copilot/customization/custom-agents"
+                number={6}
+                title="Custom agents in VS Code"
+                description="Create custom agents that enable you to configure the AI to adopt different personas to specific roles and tasks."
+            />
+        </section>
     </div>
 
     <footer>
@@ -39,115 +86,49 @@ import Link from "./Link.astro";
             >
         </p>
     </footer>
-
-    <style>
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            color: white;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-
-        .links-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .link-card {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .link-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .link-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-
-        .link-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-
-        .link-title {
-            font-size: 1.3em;
-            font-weight: 600;
-            color: #2d3748;
-        }
-
-        .link-description {
-            color: #4a5568;
-            line-height: 1.6;
-            margin-bottom: 12px;
-        }
-
-        .link-url {
-            color: #667eea;
-            font-size: 0.9em;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .arrow {
-            transition: transform 0.3s ease;
-        }
-
-        .link-card:hover .arrow {
-            transform: translateX(4px);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: white;
-            opacity: 0.8;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-
-            .link-card {
-                padding: 20px;
-            }
-        }
-    </style>
 </div>
+
+<script>
+    const lightBtn = document.getElementById("lightBtn");
+    const darkBtn = document.getElementById("darkBtn");
+    const html = document.documentElement;
+    //
+    // Check for saved theme preference, or use system preference, or default to light
+    function getInitialTheme() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            return savedTheme;
+        }
+
+        // Check system preference
+        if (
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+            return "dark";
+        }
+
+        return "light";
+    }
+
+    // Check for saved theme preference or default to light
+    const currentTheme = getInitialTheme();
+    html.setAttribute("data-theme", currentTheme);
+    updateActiveButton(currentTheme);
+
+    if (lightBtn && darkBtn) {
+        lightBtn.addEventListener("click", () => setTheme("light"));
+        darkBtn.addEventListener("click", () => setTheme("dark"));
+    }
+
+    function setTheme(theme) {
+        html.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        updateActiveButton(theme);
+    }
+
+    function updateActiveButton(theme) {
+        lightBtn.classList.toggle("active", theme === "light");
+        darkBtn.classList.toggle("active", theme === "dark");
+    }
+</script>
