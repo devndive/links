@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://devndive.github.io',
-	base: '/links',
+  site: 'https://devndive.github.io',
+  base: '/links',
 });

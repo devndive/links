@@ -1,0 +1,80 @@
+---
+const { number, title, description, href } = Astro.props;
+---
+
+<a href={`${href}`} class="link-card">
+    <div class="link-header">
+        <div class="link-icon">{number}</div>
+        <div class="link-title">{title}</div>
+    </div>
+    <p class="link-description">{description}</p>
+    <div class="link-url">
+        Visit resource <span class="arrow">→</span>
+    </div>
+</a>
+
+<style>
+    .link-card {
+        background: white;
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .link-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .link-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .link-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        flex-shrink: 0;
+    }
+
+    .link-title {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #2d3748;
+    }
+
+    .link-description {
+        color: #4a5568;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    .link-url {
+        color: #667eea;
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .link-card:hover .arrow {
+        transform: translateX(4px);
+    }
+</style>
