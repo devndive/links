@@ -3,141 +3,164 @@ import Link from "./Link.astro";
 ---
 
 <div class="container">
-    <header>
-        <div class="theme-toggle">
-            <button
-                class="theme-btn active"
-                id="lightBtn"
-                aria-label="Light mode">☀️</button
-            >
-            <button class="theme-btn" id="darkBtn" aria-label="Dark mode"
-                >🌙</button
-            >
-        </div>
-        <h1>AI Assisted Engineering</h1>
-        <p class="subtitle">
-            Resource that help to manage context and optimize quality of the
-            code generated.
-        </p>
-    </header>
+	<header>
+		<div class="theme-toggle">
+			<button
+				class="theme-btn active"
+				id="lightBtn"
+				aria-label="Light mode">☀️</button
+			>
+			<button
+				class="theme-btn"
+				id="darkBtn"
+				aria-label="Dark mode">🌙</button
+			>
+		</div>
+		<h1>AI Assisted Engineering</h1>
+		<p class="subtitle">
+			Resource that help to manage context and optimize
+			quality of the code generated.
+		</p>
+	</header>
 
-    <div class="links-container">
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title">Mastering GitHub Copilt</h2>
-                <p class="section-description">
-                    Essential links and tools to boost your success
-                </p>
-            </div>
-            <Link
-                href="https://github.com/github/awesome-copilot/tree/main"
-                number={1}
-                title="Awesome Copilot"
-                description="A community curated collection of custom agents, prompts and instructions to supercharge your GitHub Copilot experience."
-            />
+	<div class="links-container">
+		<section class="section">
+			<div class="section-header">
+				<h2 class="section-title">
+					Mastering GitHub Copilt
+				</h2>
+				<p class="section-description">
+					Essential links and tools to boost your
+					success
+				</p>
+			</div>
+			<Link
+				href="https://github.com/github/awesome-copilot/tree/main"
+				number={1}
+				title="Awesome Copilot"
+				description="A community curated collection of custom agents, prompts and instructions to supercharge your GitHub Copilot experience."
+			/>
 
-            <Link
-                href="https://arinco.com.au/blog/github-copilot-devops-excellence-prompt-files-vs-instructions-vs-chat-modes/"
-                number={2}
-                title="Prompt files vs. Instructions vs. Chat Modes (now agents)"
-                description="A great post explaining the difference and use cases for each feature. It also includes some examples and a decision matrix"
-            />
-            <Link
-                href="https://austen.info/blog/github-copilot-agent-mcp"
-                number={3}
-                title="Developing with GitHub Copilot Agent Mode and MCP"
-                description="Learn how to build a research, planning and implementation agent."
-            />
+			<Link
+				href="https://arinco.com.au/blog/github-copilot-devops-excellence-prompt-files-vs-instructions-vs-chat-modes/"
+				number={2}
+				title="Prompt files vs. Instructions vs. Chat Modes (now agents)"
+				description="A great post explaining the difference and use cases for each feature. It also includes some examples and a decision matrix"
+			/>
+			<Link
+				href="https://austen.info/blog/github-copilot-agent-mcp"
+				number={3}
+				title="Developing with GitHub Copilot Agent Mode and MCP"
+				description="Learn how to build a research, planning and implementation agent."
+			/>
 
-            <Link
-                href="https://modelcontextprotocol.io/docs/develop/build-server"
-                number={4}
-                title="Building your own MCP server"
-                description="Learn how you can build your own MCP server and how to use it."
-            />
+			<Link
+				href="https://modelcontextprotocol.io/docs/develop/build-server"
+				number={4}
+				title="Building your own MCP server"
+				description="Learn how you can build your own MCP server and how to use it."
+			/>
 
-            <Link
-                href="https://github.com/settings/copilot/features"
-                number={5}
-                title="GitHub Copilot Settings"
-                description="Check which GitHub Copilot Features are enabled or disabled"
-            />
-        </section>
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title">VS Code</h2>
-                <p class="section-description">
-                    Resource specifically to work with VS Code
-                </p>
-            </div>
+			<Link
+				href="https://github.com/settings/copilot/features"
+				number={5}
+				title="GitHub Copilot Settings"
+				description="Check which GitHub Copilot Features are enabled or disabled"
+			/>
+		</section>
+		<section class="section">
+			<div class="section-header">
+				<h2 class="section-title">VS Code</h2>
+				<p class="section-description">
+					Resource specifically to work with VS
+					Code
+				</p>
+			</div>
 
-            <Link
-                href="https://code.visualstudio.com/docs/copilot/customization/custom-instructions"
-                number={6}
-                title="Use custom instructions in VS Code"
-                description="A guideline on how to configure and use custom instructions to define guidelines and rules."
-            />
+			<Link
+				href="https://code.visualstudio.com/docs/copilot/customization/custom-instructions"
+				number={6}
+				title="Use custom instructions in VS Code"
+				description="A guideline on how to configure and use custom instructions to define guidelines and rules."
+			/>
 
-            <Link
-                href="https://code.visualstudio.com/docs/copilot/customization/custom-agents"
-                number={7}
-                title="Custom agents in VS Code"
-                description="Create custom agents that enable you to configure the AI to adopt different personas to specific roles and tasks."
-            />
-        </section>
-    </div>
+			<Link
+				href="https://code.visualstudio.com/docs/copilot/customization/custom-agents"
+				number={7}
+				title="Custom agents in VS Code"
+				description="Create custom agents that enable you to configure the AI to adopt different personas to specific roles and tasks."
+			/>
+		</section>
+		<section class="section">
+			<div class="section-header">
+				<h2 class="section-title">Workshops</h2>
+				<p class="section-description">
+					Workshops to help understand building
+					agents
+				</p>
+			</div>
 
-    <footer>
-        <p>
-            Questions? Feel free to reach out to me <a
-                href="mailto:yann.duval@microsoft.com"
-                >yann dot duval at microsoft dot com</a
-            >
-        </p>
-    </footer>
+			<Link
+				href="https://github.com/denniszielke/frontier-agents-workshop"
+				number={8}
+				title="A workshop designed to understand different agentic patterns"
+				description="An immersive hands-on lab focused on Microsoft Agent Framework, where you will learn how to build intelligent multi-agent systems that leverage Azure AI capabilities"
+			/>
+		</section>
+	</div>
+
+	<footer>
+		<p>
+			Questions? Feel free to reach out to me <a
+				href="mailto:yann.duval@microsoft.com"
+				>yann dot duval at microsoft dot com</a
+			>
+		</p>
+	</footer>
 </div>
 
 <script>
-    const lightBtn = document.getElementById("lightBtn");
-    const darkBtn = document.getElementById("darkBtn");
-    const html = document.documentElement;
-    //
-    // Check for saved theme preference, or use system preference, or default to light
-    function getInitialTheme() {
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme) {
-            return savedTheme;
-        }
+	const lightBtn = document.getElementById("lightBtn");
+	const darkBtn = document.getElementById("darkBtn");
+	const html = document.documentElement;
+	//
+	// Check for saved theme preference, or use system preference, or default to light
+	function getInitialTheme() {
+		const savedTheme = localStorage.getItem("theme");
+		if (savedTheme) {
+			return savedTheme;
+		}
 
-        // Check system preference
-        if (
-            window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-        ) {
-            return "dark";
-        }
+		// Check system preference
+		if (
+			window.matchMedia &&
+			window.matchMedia("(prefers-color-scheme: dark)")
+				.matches
+		) {
+			return "dark";
+		}
 
-        return "light";
-    }
+		return "light";
+	}
 
-    // Check for saved theme preference or default to light
-    const currentTheme = getInitialTheme();
-    html.setAttribute("data-theme", currentTheme);
-    updateActiveButton(currentTheme);
+	// Check for saved theme preference or default to light
+	const currentTheme = getInitialTheme();
+	html.setAttribute("data-theme", currentTheme);
+	updateActiveButton(currentTheme);
 
-    if (lightBtn && darkBtn) {
-        lightBtn.addEventListener("click", () => setTheme("light"));
-        darkBtn.addEventListener("click", () => setTheme("dark"));
-    }
+	if (lightBtn && darkBtn) {
+		lightBtn.addEventListener("click", () => setTheme("light"));
+		darkBtn.addEventListener("click", () => setTheme("dark"));
+	}
 
-    function setTheme(theme) {
-        html.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
-        updateActiveButton(theme);
-    }
+	function setTheme(theme) {
+		html.setAttribute("data-theme", theme);
+		localStorage.setItem("theme", theme);
+		updateActiveButton(theme);
+	}
 
-    function updateActiveButton(theme) {
-        lightBtn.classList.toggle("active", theme === "light");
-        darkBtn.classList.toggle("active", theme === "dark");
-    }
+	function updateActiveButton(theme) {
+		lightBtn.classList.toggle("active", theme === "light");
+		darkBtn.classList.toggle("active", theme === "dark");
+	}
 </script>
