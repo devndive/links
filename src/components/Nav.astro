@@ -1,0 +1,83 @@
+---
+const base = import.meta.env.BASE_URL;
+const homeHref = base;
+const toolsHref = `${base}tools`;
+---
+
+<nav class="site-nav" aria-label="Primary">
+    <a class="site-nav__brand" href={homeHref}>AI Assisted Engineering</a>
+    <div class="site-nav__actions">
+        <div class="site-nav__links">
+            <a class="site-nav__link" href={homeHref}>Home</a>
+            <a class="site-nav__link" href={toolsHref}>Tools</a>
+        </div>
+        <div class="theme-toggle">
+            <button
+                class="theme-btn active"
+                id="lightBtn"
+                aria-label="Light mode">☀️</button
+            >
+            <button
+                class="theme-btn"
+                id="darkBtn"
+                aria-label="Dark mode">🌙</button
+            >
+        </div>
+    </div>
+</nav>
+
+<script is:inline>
+    const lightBtn = document.getElementById("lightBtn");
+    const darkBtn = document.getElementById("darkBtn");
+    const html = document.documentElement;
+
+    function getInitialTheme() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            return savedTheme;
+        }
+
+        if (
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+            return "dark";
+        }
+
+        return "light";
+    }
+
+    const currentTheme = getInitialTheme();
+    html.setAttribute("data-theme", currentTheme);
+
+    if (lightBtn instanceof HTMLButtonElement && darkBtn instanceof HTMLButtonElement) {
+        updateActiveButton(currentTheme, lightBtn, darkBtn);
+        lightBtn.addEventListener("click", () =>
+            setTheme("light", lightBtn, darkBtn)
+        );
+        darkBtn.addEventListener("click", () =>
+            setTheme("dark", lightBtn, darkBtn)
+        );
+    }
+
+    /**
+     * @param {"light" | "dark"} theme
+     * @param {HTMLButtonElement} lightButton
+     * @param {HTMLButtonElement} darkButton
+     */
+    function setTheme(theme, lightButton, darkButton) {
+        html.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        updateActiveButton(theme, lightButton, darkButton);
+    }
+
+    /**
+     * @param {"light" | "dark"} theme
+     * @param {HTMLButtonElement} lightButton
+     * @param {HTMLButtonElement} darkButton
+     */
+    function updateActiveButton(theme, lightButton, darkButton) {
+        lightButton.classList.toggle("active", theme === "light");
+        darkButton.classList.toggle("active", theme === "dark");
+    }
+</script>

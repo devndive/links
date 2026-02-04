@@ -1,0 +1,88 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Link from "./../components/Link.astro";
+---
+
+<Layout>
+	<div class="container">
+		<header>
+			<h1>Tools</h1>
+			<p class="subtitle">
+				Curated tools to speed up daily work.
+			</p>
+		</header>
+
+		<div class="links-container">
+			<section class="section">
+				<div class="section-header">
+					<h2 class="section-title">
+						Tools for AI Engineering
+					</h2>
+					<p class="section-description">
+						Essential links and tools to
+						boost your success
+					</p>
+				</div>
+				<Link
+					href="https://btca.dev/"
+					number={1}
+					title="Better context for You and Your Agents"
+					description="Instead of relying on documentation and asking an AI assitant questions about possibly outdated docs, ask questions about the actual code. This tools eases the process."
+				/>
+
+				<Link
+					href="https://opencode.ai/"
+					number={2}
+					title="The open source AI coding agent"
+					description="An AI coding assitant that supports multiple backends like GitHub Copilot."
+				/>
+
+				<Link
+					href="https://www.vibekanban.com/"
+					number={3}
+					title="Manage your coding agents in paralle"
+					description="Vibe Kanban lets you run coding agents in parallel without conflicts, and perform code review through our diff tool. Now you can focus on planning and quality instead of watching terminal logs."
+				/>
+
+				<Link
+					href="https://github.com/steveyegge/beads"
+					number={4}
+					title="Distributed, git backed graph issue tracker for AI agents"
+					description="Helps you manage your tasks, stories, epics and bugs for your AI agents. Everything local in your repo. Can be shared or used personally only."
+				/>
+			</section>
+
+			<section class="section">
+				<div class="section-header">
+					<h2 class="section-title">
+						Uncatogorized tools
+					</h2>
+					<p class="section-description">
+						Everything that did fit in any
+						other catogry
+					</p>
+				</div>
+				<Link
+					href="https://github.com/equinix-labs/otel-cli"
+					number={5}
+					title="otel-cli"
+					description="Command line tool for sending OpenTelemetry traces. Can be used for debugging setups."
+				/>
+
+				<Link
+					href="https://azure-samples.github.io/raspberry-pi-web-simulator/"
+					number={6}
+					title="Raspberry Pi Web Simulator"
+					description="A great simulator to send messages and mimic an IoT setup."
+				/>
+
+				<Link
+					href="https://mqttx.app/"
+					number={7}
+					title="All-in-One MQTT Client Toolbox"
+					description="Your postman for MQTT"
+				/>
+			</section>
+		</div>
+	</div>
+</Layout>

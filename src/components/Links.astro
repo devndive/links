@@ -4,18 +4,6 @@ import Link from "./Link.astro";
 
 <div class="container">
 	<header>
-		<div class="theme-toggle">
-			<button
-				class="theme-btn active"
-				id="lightBtn"
-				aria-label="Light mode">☀️</button
-			>
-			<button
-				class="theme-btn"
-				id="darkBtn"
-				aria-label="Dark mode">🌙</button
-			>
-		</div>
 		<h1>AI Assisted Engineering</h1>
 		<p class="subtitle">
 			Resource that help to manage context and optimize
@@ -118,49 +106,3 @@ import Link from "./Link.astro";
 		</p>
 	</footer>
 </div>
-
-<script>
-	const lightBtn = document.getElementById("lightBtn");
-	const darkBtn = document.getElementById("darkBtn");
-	const html = document.documentElement;
-	//
-	// Check for saved theme preference, or use system preference, or default to light
-	function getInitialTheme() {
-		const savedTheme = localStorage.getItem("theme");
-		if (savedTheme) {
-			return savedTheme;
-		}
-
-		// Check system preference
-		if (
-			window.matchMedia &&
-			window.matchMedia("(prefers-color-scheme: dark)")
-				.matches
-		) {
-			return "dark";
-		}
-
-		return "light";
-	}
-
-	// Check for saved theme preference or default to light
-	const currentTheme = getInitialTheme();
-	html.setAttribute("data-theme", currentTheme);
-	updateActiveButton(currentTheme);
-
-	if (lightBtn && darkBtn) {
-		lightBtn.addEventListener("click", () => setTheme("light"));
-		darkBtn.addEventListener("click", () => setTheme("dark"));
-	}
-
-	function setTheme(theme) {
-		html.setAttribute("data-theme", theme);
-		localStorage.setItem("theme", theme);
-		updateActiveButton(theme);
-	}
-
-	function updateActiveButton(theme) {
-		lightBtn.classList.toggle("active", theme === "light");
-		darkBtn.classList.toggle("active", theme === "dark");
-	}
-</script>
