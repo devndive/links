@@ -31,26 +31,8 @@ const toolsHref = `${base}tools`;
     const darkBtn = document.getElementById("darkBtn");
     const html = document.documentElement;
 
-    function getInitialTheme() {
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme) {
-            return savedTheme;
-        }
-
-        if (
-            window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-        ) {
-            return "dark";
-        }
-
-        return "light";
-    }
-
-    const currentTheme = getInitialTheme();
-    html.setAttribute("data-theme", currentTheme);
-
     if (lightBtn instanceof HTMLButtonElement && darkBtn instanceof HTMLButtonElement) {
+        const currentTheme = html.getAttribute("data-theme") || "light";
         updateActiveButton(currentTheme, lightBtn, darkBtn);
         lightBtn.addEventListener("click", () =>
             setTheme("light", lightBtn, darkBtn)

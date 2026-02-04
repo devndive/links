@@ -11,6 +11,16 @@ import Nav from "../components/Nav.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>AI assisted Engineering</title>
+		<script is:inline>
+			(() => {
+				const savedTheme = localStorage.getItem("theme");
+				const prefersDark =
+					window.matchMedia &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches;
+				const theme = savedTheme || (prefersDark ? "dark" : "light");
+				document.documentElement.setAttribute("data-theme", theme);
+			})();
+		</script>
 	</head>
 	<body>
 		<Nav />
