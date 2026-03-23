@@ -1,0 +1,11 @@
+page: index
+order: 3
+title: Workshops
+description: Workshops to help understand building agents
+links:
+  - title: A workshop designed to understand different agentic patterns
+    href: https://github.com/denniszielke/frontier-agents-workshop
+    description: An immersive hands-on lab focused on Microsoft Agent Framework, where you will learn how to build intelligent multi-agent systems that leverage Azure AI capabilities
+  - title: A hands-on workshop to master GitHub Copilot
+    href: https://github.com/Azure-Samples/github-copilot-hands-on
+    description: A practical hands-on lab that guides you through GitHub Copilot features with real-world customer use cases and exercises.

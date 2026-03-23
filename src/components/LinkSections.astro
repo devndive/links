@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+import Link from "./Link.astro";
+
+interface Props {
+	page: string;
+}
+
+const { page } = Astro.props;
+
+const allSections = await getCollection("sections");
+const sections = allSections
+	.filter((s) => s.data.page === page)
+	.sort((a, b) => a.data.order - b.data.order);
+---
+
+<div class="links-container">
+	{
+		sections.map((section) => (
+			<section class="section">
+				<div class="section-header">
+					<h2 class="section-title">{section.data.title}</h2>
+					<p class="section-description">
+						{section.data.description}
+					</p>
+				</div>
+				{section.data.links.map((link) => (
+					<Link
+						href={link.href}
+						title={link.title}
+						description={link.description}
+					/>
+				))}
+			</section>
+		))
+	}
+</div>

@@ -152,6 +152,7 @@
             display: flex;
             flex-direction: column;
             gap: 40px;
+            counter-reset: link-counter;
         }
 
         .section {
@@ -213,6 +214,11 @@
             font-weight: 600;
             flex-shrink: 0;
             font-size: 1.1em;
+            counter-increment: link-counter;
+        }
+
+        .link-icon::before {
+            content: counter(link-counter);
         }
 
         .link-title {

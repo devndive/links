@@ -1,10 +1,10 @@
 ---
-const { number, title, description, href } = Astro.props;
+const { title, description, href } = Astro.props;
 ---
 
-<a href={`${href}`} class="link-card">
+<a href={href} class="link-card">
     <div class="link-header">
-        <div class="link-icon">{number}</div>
+        <div class="link-icon"></div>
         <div class="link-title">{title}</div>
     </div>
     <p class="link-description">{description}</p>

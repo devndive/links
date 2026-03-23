@@ -1,0 +1,14 @@
+page: tools
+order: 2
+title: Uncategorized tools
+description: Everything that did not fit in any other category
+links:
+  - title: otel-cli
+    href: https://github.com/equinix-labs/otel-cli
+    description: Command line tool for sending OpenTelemetry traces. Can be used for debugging setups.
+  - title: Raspberry Pi Web Simulator
+    href: https://azure-samples.github.io/raspberry-pi-web-simulator/
+    description: A great simulator to send messages and mimic an IoT setup.
+  - title: All-in-One MQTT Client Toolbox
+    href: https://mqttx.app/
+    description: Your postman for MQTT

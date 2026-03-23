@@ -1,0 +1,17 @@
+page: tools
+order: 1
+title: Tools for AI Engineering
+description: Essential links and tools to boost your success
+links:
+  - title: Better context for You and Your Agents
+    href: https://btca.dev/
+    description: Instead of relying on documentation and asking an AI assistant questions about possibly outdated docs, ask questions about the actual code. This tools eases the process.
+  - title: The open source AI coding agent
+    href: https://opencode.ai/
+    description: An AI coding assistant that supports multiple backends like GitHub Copilot.
+  - title: Manage your coding agents in parallel
+    href: https://www.vibekanban.com/
+    description: Vibe Kanban lets you run coding agents in parallel without conflicts, and perform code review through our diff tool. Now you can focus on planning and quality instead of watching terminal logs.
+  - title: "Distributed, git backed graph issue tracker for AI agents"
+    href: https://github.com/steveyegge/beads
+    description: Helps you manage your tasks, stories, epics and bugs for your AI agents. Everything local in your repo. Can be shared or used personally only.

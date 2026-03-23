@@ -1,0 +1,11 @@
+page: index
+order: 2
+title: VS Code
+description: Resources specifically to work with VS Code
+links:
+  - title: Use custom instructions in VS Code
+    href: https://code.visualstudio.com/docs/copilot/customization/custom-instructions
+    description: A guideline on how to configure and use custom instructions to define guidelines and rules.
+  - title: Custom agents in VS Code
+    href: https://code.visualstudio.com/docs/copilot/customization/custom-agents
+    description: Create custom agents that enable you to configure the AI to adopt different personas to specific roles and tasks.

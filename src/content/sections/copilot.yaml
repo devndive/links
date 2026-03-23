@@ -1,0 +1,26 @@
+page: index
+order: 1
+title: Mastering GitHub Copilot
+description: Essential links and tools to boost your success
+links:
+  - title: Awesome Copilot
+    href: https://github.com/github/awesome-copilot/tree/main
+    description: A community curated collection of custom agents, prompts and instructions to supercharge your GitHub Copilot experience.
+  - title: "Prompt files vs. Instructions vs. Chat Modes (now agents)"
+    href: https://arinco.com.au/blog/github-copilot-devops-excellence-prompt-files-vs-instructions-vs-chat-modes/
+    description: A great post explaining the difference and use cases for each feature. It also includes some examples and a decision matrix
+  - title: Developing with GitHub Copilot Agent Mode and MCP
+    href: https://austen.info/blog/github-copilot-agent-mcp
+    description: Learn how to build a research, planning and implementation agent.
+  - title: Building your own MCP server
+    href: https://modelcontextprotocol.io/docs/develop/build-server
+    description: Learn how you can build your own MCP server and how to use it.
+  - title: GitHub Copilot Settings
+    href: https://github.com/settings/copilot/features
+    description: Check which GitHub Copilot Features are enabled or disabled
+  - title: Using Agent Skills
+    href: https://docs.github.com/en/copilot/concepts/agents/about-agent-skills
+    description: Learn about agent skills that extend GitHub Copilot's capabilities with specialized tools and actions
+  - title: Use Hooks with Coding Agent
+    href: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/use-hooks
+    description: Configure hooks to run custom scripts automatically during coding agent sessions.
