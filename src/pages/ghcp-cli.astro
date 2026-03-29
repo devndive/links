@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<div class="container">
+		<header>
+			<h1>Tools</h1>
+			<p class="subtitle">
+				Curated tools to speed up daily work.
+			</p>
+		</header>
+
+		<h2>Session managment</h2>
+
+		<p>Make sure you have shit+enter configured to go to a new line (setup instructions) (/terminal-setup)</p>
+		<p>Check your usage (claude /usage, same for copilot)</p>
+		<p>Check your current context usage (claude /context, same for copilot)</p>
+		<p>Clear your context / start a new session (claude /clear, same for copilot)</p>
+		<p>How to interrupt the current (claude ctrl+c or ESC, same for copilot)</p>
+
+		<h2>Prompting</h2>
+
+		<p>Referenceing specific files, use the @ symbol, then select the file with up and down error. These files will be added to your context. (same for copilot)</p>
+
+		<p>You can stash a command with ctrl+s. After the next command you get your stased command back. (does not exist in copilot)</p>
+
+		<p>Copy & Paste images into the CLI. Does not work in WSL. (needs checking, on native)</p>
+
+		<h2>GHCP Cli and VSCode</h2>
+
+		<p>Connect to your IDE via /ide. This allows you to view diffs directly in your IDE, rather than a regular diff in the terminal (/ide, same for GHCP CLI)</p>
+
+
+		<h2>Time travel</h2>
+
+		<p>ESC + ESC to enter the time travel mode. Now you can select where to go and how to go there,
+			Restore code and conversation, Restore conversation (code will be unchanged), Restore code (conversation will be unchanged). (same in GHCP without the options, /undo /rewind)</p>
+
+		<p>Resuming sessions - exit claude code and resume by running `claude --resume <session-id>` (same for GHCP CLI)</p>
+		<p>Can not remember your session id? `claude --continue` (same for GHCP CLI)</p>
+		<p>Start claude without parameters, /resume (same for GHCP CLI)</p>
+
+		<h2>Bash commands?!</h2>
+		<p>Running a shell command - ! to enter the bash mode. CTRL+B to run a command (like a dev server in the background). Arrow keys to get back to that background session (GHCP CLI ! to enter shell mode, no way to return to running processes?! needs investigation)</p>
+
+		<p>CTRL + Z + fg</p>
+
+		<h2>Permissions</h2>
+
+		<p>Permissions are stored in .claude/settings.local.json (GHCP CLI ~/.copilot/permissions-config.json)</p>
+		<p>Permissions can be shared in a team with .claude/settings.json (GHCP CLI does not support this)</p>
+
+	</div>
+</Layout>
