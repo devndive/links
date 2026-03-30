@@ -58,4 +58,57 @@ import Layout from "../layouts/Layout.astro";
 		</p>
 
 	</div>
+	<div class="container">
+		<header>
+			<h1>GHCP Fundamentals</h1>
+			<p class="subtitle">
+				Constraints of LLMs
+			</p>
+		</header>
+		<h2>Smart zone vs Dumb zone</h2>
+		<p> 80-100k Token<br />
+				Sources: 
+				- https://medium.com/@rajesh.godavarthi/context-engineering-what-ai-builders-know-that-you-dont-5-counter-intuitive-lessons-from-the-8435308183ca
+				- https://www.tqdev.com/2025-context-engineering-mastering-ai-tools/
+		1m Tokens = more dumb zone
+		</p>
+
+		<h2>Training data cut off</h2>
+		<h2>No memory / stateless</h2>
+	</div>
+	<div class="container">
+		<header>
+			<h1>GHCP Fundamentals</h1>
+			<p class="subtitle">
+				 What are subagents
+			</p>
+		</header>
+		<h2>Orchestrator</h2>
+		<p>Orchestrator spwans multiple sub agents
+
+			- used to save context in the orchestrator
+			- can be spwaned with different model
+			- can be spwaned with different system prompt
+		</p>
+	</div>
+	<div class="container">
+		<header>
+			<h1>GHCP Fundamentals</h1>
+			<p class="subtitle">
+				 Codebase Exploration
+			</p>
+		</header>
+		<h2>Problem</h2>
+		<p>Whenever the agent does something it has to explore the codebase (stateless). <br />
+			Being able to explore the codebase is crucial since you do it basically every time you start a new session.
+			<br />
+			Prompt: "What is the tech stack of this codebase and what is its purpose?<br />
+			Prompt: "Explore the codebase and tell me the tech stack of this codebase and what is its purpose?<br />
+		</p>
+		<h2>Showing context</h2>
+		<h2>What is plan mode?</h2>
+		<p>- new system prompt, only read, bash and MCP Servers
+			- interrogate me about every single design decision inside here so that we both understand what we're trying to build better
+		</p>
+	</div>
 </Layout>
